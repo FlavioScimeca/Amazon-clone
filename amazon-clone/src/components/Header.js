@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+import { Bars3Icon, MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
@@ -48,7 +48,21 @@ const Header = () => {
         </div>
       </div>
       {/* Bottom nav */}
-      <div></div>
+      <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white">
+        <p className="link flex items-center">
+          <Bars3Icon className="h-6 mr-1" />
+          All
+        </p>
+        <p className="link">Prime Video</p>
+        <p className="link">Amazon Business</p>
+        <p className="link">Today s Deals</p>
+        <p className="link hidden lg:inline-flex ">Electronics</p>
+        <p className="link hidden lg:inline-flex ">Food & Grocery</p>
+        <p className="link hidden lg:inline-flex ">Prime</p>
+        <p className="link hidden lg:inline-flex ">Buy Again</p>
+        <p className="link hidden lg:inline-flex ">Shopper </p>
+        <p className="link hidden lg:inline-flex ">Health & Personal Care</p>
+      </div>
     </header>
   );
 };

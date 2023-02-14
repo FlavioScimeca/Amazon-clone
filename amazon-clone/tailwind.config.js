@@ -18,5 +18,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // ti permette di troncare il testo dopo N righe
+    require('@tailwindcss/line-clamp'),
+  ],
 };
