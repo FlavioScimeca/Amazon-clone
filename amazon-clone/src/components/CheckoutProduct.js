@@ -31,7 +31,7 @@ const CheckoutProduct = ({ product }) => {
     dispatch(removeFromBasket({ id }));
   };
   return (
-    <div className="grid grid-cols-5">
+    <div className="grid grid-cols-5 mb-3">
       <Image
         alt={title}
         src={image}
@@ -65,7 +65,6 @@ const CheckoutProduct = ({ product }) => {
       </div>
       {/* Right add/remove buttons */}
       <div className="flex flex-col space-y-2 my-auto justify-self-end">
-        <div className="button text-center">Add to Basket</div>
         <div
           onClick={() => removeItemFromBasket()}
           className="button text-center"
