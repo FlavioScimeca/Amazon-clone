@@ -105,7 +105,7 @@ const fullfillOrder = async (session) => {
 
   return app
     .firestore()
-    .collection('user')
+    .collection('users')
     .doc(session.metadata.email)
     .collection('orders')
     .doc(session.id)

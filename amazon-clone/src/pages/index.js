@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css';
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
 import ProductFeed from '@/components/ProductFeed';
+import { getSession } from 'next-auth/react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -32,7 +33,8 @@ export default function Home({ products }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const session = await getSession();
   const products = await fetch('https://fakestoreapi.com/products').then(
     (res) => res.json()
   );
@@ -40,6 +42,7 @@ export async function getServerSideProps() {
   return {
     props: {
       products,
+      session,
     },
   };
 }
