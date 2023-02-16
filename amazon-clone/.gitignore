@@ -32,4 +32,6 @@ yarn-error.log*
 .vercel
 
 #firebase
-.firebase.js
+firebase.js
+permissions.json
+permission.json
